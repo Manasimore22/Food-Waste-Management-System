@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NGO Photo Upload</title>
+    <link rel="stylesheet" type="text/css" href="ngu.css">
+</head>
+<body>
+    <div class="center">
+        <div class="container">
+            <h1>Upload and View Photos for NGO</h1>
+            <div class="upload-container">
+                <label for="photoInput" class="custom-file-upload">
+                    <i class="fa fa-cloud-upload"></i> Choose a photo
+                </label>
+                <input type="file" name="photo" id="photoInput">
+                <button id="uploadBtn">Upload Photo</button>
+            </div>
+            <div class="view-photo">
+                <a href="#" id="viewPhotoLink">View Photo</a>
+                <img id="uploadedImage" src="" alt="Uploaded Photo">
+            </div>
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="upload.js"></script>
+</body>
+</html>

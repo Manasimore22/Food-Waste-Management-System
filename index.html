@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CLEVER MEAL</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   
+    .restuarant-options, .ngo-options {
+      display: none;
+    }
+  </style>
+</head>
+<body>  
+  <div class="container">
+    <img src="logo.jpg" alt="Food Waste Reduction Project Logo" class="logo">
+    <h1>CLEVER MEAL</h1>
+    <div class="options">
+      <a href="#" class="option-btn restuarant" onclick="toggleAdminOptions()" id="restuarantButton">Restuarant</a>
+      <div class="restuarant-options" id="restuarantOptions">
+        <a href="admin-login.html" class="option-btn restuarant">Login</a>
+        <a href="admin-register.html" class="option-btn restuarant">Register</a>
+      </div>
+      <a href="#" class="option-btn ngo" onclick="toggleNGOOptions()" id="ngoButton">NGO</a>
+      <div class="ngo-options" id="ngoOptions">
+        <a href="ngo-login.html" class="option-btn ngo">Login</a>
+        <a href="ngo-register.html" class="option-btn ngo">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    
+    function toggleAdminOptions() {
+      var restuarantOptions = document.getElementById('restuarantOptions');
+      var ngoOptions = document.getElementById('ngoOptions');
+      var ngoButton = document.getElementById('ngoButton');
+      var restuarantButton = document.getElementById('restuarantButton');
+
+      if (restuarantOptions.style.display === 'none') {
+        restuarantOptions.style.display = 'block';
+        ngoOptions.style.display = 'none';
+        ngoButton.style.display = 'none';
+        restuarantButton.style.display = 'none';
+      } else {
+        restuarantOptions.style.display = 'none';
+        ngoButton.style.display = 'inline-block';
+      }
+    }
+
+    
+    function toggleNGOOptions() {
+      var ngoOptions = document.getElementById('ngoOptions');
+      var restuarantOptions = document.getElementById('restuarantOptions');
+      var restuarantButton = document.getElementById('restuarantButton');
+      var ngoButton = document.getElementById('ngoButton');
+
+      if (ngoOptions.style.display === 'none') {
+        ngoOptions.style.display = 'block';
+        restuarantOptions.style.display = 'none';
+        restuarantButton.style.display = 'none';
+        ngoButton.style.display = 'none';
+      } else {
+        ngoOptions.style.display = 'none';
+        restuarantButton.style.display = 'inline-block';
+      }
+    }
+  </script>
+</body>
+</html>
+

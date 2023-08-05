@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO - Food Waste Reduction Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>NGO</h1>
+    <form id="ngo-form" onsubmit="submitForm(event)">
+      
+      <div>
+        <input type="text" name="myName" placeholder="Enter Name of the NGO" required>
+      </div>
+      <br>
+
+      <div>
+        <input type="text" name="myAddress" placeholder="Enter Address of the NGO" required>
+      </div>
+
+      <br>
+      <div>
+        <input type="text" name="mytype" placeholder="Enter Type of the NGO" required>
+      </div>
+
+      <br>
+      <div>
+        <input type="text" name="mynumber" placeholder="Enter Number of the NGO" required>
+      </div>
+      <br>
+      
+      <div>
+        <input type="email" name="myEmail" placeholder="Enter Email ID of the NGO" required>
+      </div>
+      <br>
+
+      Food type:<input type="radio" id="vegetarian" name="foodType" value="vegetarian" required>
+      <label for="vegetarian">Vegetarian</label>
+  
+      <input type="radio" id="nonVegetarian" name="foodType" value="nonvegetarian" required>
+      <label for="nonVegetarian">Non-vegetarian</label><br>
+      <br>
+
+      Enter the username and password:
+      <div>
+        <input type="text" name="myusername" placeholder="Enter Username" required>
+      </div>
+      <br>
+
+      <div class="password-field">
+        <input type="password" id="fakePassword" name="mypassword" placeholder="Enter Password" required>
+        <span class="password-toggle" onclick="togglePasswordVisibility()">&#128065;</span>
+      </div>
+
+      <script>
+        function togglePasswordVisibility() {
+          var passwordInput = document.getElementById("fakePassword");
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+          } else {
+            passwordInput.type = "password";
+          }
+        }
+
+        function submitForm(event) {
+          event.preventDefault();
+          alert("Registration successfully done!");
+          window.location.href = "nprofile.html";
+        }
+      </script>            
+      <br>
+      
+      <div>
+        <input type="submit" value="Submit">
+      </div>
+      
+    </form>
+    <a href="index.html" class="back-btn">Back to Home</a>
+  </div>
+</body>
+</html>
