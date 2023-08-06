@@ -19,4 +19,4 @@ food. Thisfood can then reach out to the people in need. The restaurants and use
 
 Dataset link: https://www.kaggle.com/datasets/trevinhannibal/food-wastage-data-in-restaurant
 
-Video Explanation Link :
+Video Explanation Link :https://youtu.be/luRAncZimnY
